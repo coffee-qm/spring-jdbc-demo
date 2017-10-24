@@ -11,8 +11,6 @@ import com.coffee.common.db.demo.service.impl.DemoSvcImpl;
 public class Demo {
 
 	public static void main(final String[] args) {
-		// final String path = System.getProperty("user.dir")
-		// + "/conf/conf/spring/applicationContext.xml";
 		final String path = "classpath:conf/spring/applicationContext.xml";
 		System.out.println("path:" + path);
 		System.out.println("exists:" + new File(path).exists());
