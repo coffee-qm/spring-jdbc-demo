@@ -6,4 +6,5 @@
 
     <!--  -->
     <import resource="applicationContext-db.xml"></import>
+    <import resource="applicationContext-service.xml"></import>
 </beans>
