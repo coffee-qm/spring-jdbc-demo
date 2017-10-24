@@ -1,6 +1,7 @@
 package com.coffee.common.db.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -18,8 +19,7 @@ public class CommonDao {
 		this.jdbcTemplate = new JdbcTemplate(this.dataSource);
 	}
 
-	public <T extends Object> List<T> query(final String sql,
-			final Object[] args, final Class<T> t) {
-		return jdbcTemplate.queryForList(sql, t, args);
+	public List<Map<String, Object>> query(final String sql, final Object[] args) {
+		return jdbcTemplate.queryForList(sql, args);
 	}
 }
