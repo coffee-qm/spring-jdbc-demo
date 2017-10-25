@@ -15,6 +15,6 @@ default-autowire="byName">
                 <value>classpath:conf/resources.properties</value>
             </list>
         </property>
-		<property name="fileEncoding" value="UTF-8" />
+        <property name="fileEncoding" value="UTF-8" />
     </bean>
 </beans>
