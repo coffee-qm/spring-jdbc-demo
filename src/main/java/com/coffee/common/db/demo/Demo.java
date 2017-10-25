@@ -6,6 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.coffee.common.common.exp.SvcException;
 import com.coffee.common.db.demo.service.impl.DemoSvcImpl;
 
+/**
+ * @author QM
+ */
 public class Demo {
 
 	public static void main(final String[] args) {
