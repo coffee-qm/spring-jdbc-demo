@@ -12,25 +12,15 @@ default-autowire="byName"
     <!--  -->
     <bean id="dataSource"
      	class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/mysql?useUnicode=true&amp;characterEncoding=utf-8"/>    	
-        <property name="username" value="***"/>
-        <property name="password" value="***" />
+        <property name="driverClassName" value="${db.driver.class}" />
+        <property name="url" value="${db.url}"/>    	
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}" />
     </bean>
     <bean id="commonDao"  
         class="com.coffee.common.db.dao.CommonDao">
         <property name="dataSource" ref="dataSource" />
     </bean>
-    <!--
-    <bean id="demoDao"  
-        class="com.coffee.common.db.demo.dao.DemoDao">
-        <property name="dao" ref="commonDao" />
-    </bean>
-    <bean id="demoSvc"  
-        class="com.coffee.common.db.demo.service.impl.DemoSvcImpl">
-        <property name="dao" ref="demoDao" />
-    </bean>
-    -->
     <!--
     <bean id="dataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
         <property name="targetDataSource">
@@ -47,9 +37,5 @@ default-autowire="byName"
             </bean>
         </property>
     </bean>
-    <bean id="abstractDao" abstract="true">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>   
-    <bean parent="abstractDao" id="userDao" class="cn.javass.spring.chapter7.dao.jdbc.UserJdbcDaoImpl" />
     -->
 </beans>

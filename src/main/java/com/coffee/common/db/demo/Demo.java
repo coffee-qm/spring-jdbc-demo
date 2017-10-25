@@ -1,7 +1,5 @@
 package com.coffee.common.db.demo;
 
-import java.io.File;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,8 +10,6 @@ public class Demo {
 
 	public static void main(final String[] args) {
 		final String path = "classpath:conf/spring/applicationContext.xml";
-		System.out.println("path:" + path);
-		System.out.println("exists:" + new File(path).exists());
 		final String[] configLocations = new String[] { path };
 		@SuppressWarnings("resource")
 		final ApplicationContext ctx = new ClassPathXmlApplicationContext(
